@@ -8,17 +8,17 @@ import RightSection from '@components/ui/blocks/RightSection.astro'
 // Import necessary images
 import blueprints from '@images/blueprints-image.avif'
 import personWorking from '@images/person-working.avif'
-import beforeAfter from '@images/before-after.avif'
 import constructionWorkers from '@images/construction-workers.avif'
 import underConstruction from '@images/under-construction.avif'
-import door from '@images/door.jpg'
-import kitchen from '@images/kitchen.jpg'
-import painting from '@images/painting.jpg'
-import cladding from '@images/cladding.jpg'
+import officeJoinery from '@images/office-joinery.jpg'
+import commercialKitchen from '@images/commercial-kitchen.jpg'
+import industrialPainting from '@images/industrial-painting.jpg'
+import officeCladding from '@images/office-cladding.jpg'
 import hvac from '@images/hvac.jpg'
 import pipes from '@images/pipes.jpg'
-import gasBoiler from '@images/gas-boiler.jpg'
+import commercialBoiler from '@images/commercial-boiler.jpg'
 import electricalBoard from '@images/electrical-board.jpg'
+import warehouseConstruction from '@images/warehouse-construction.jpg'
 import { SITE } from '@data/constants'
 
 interface Article {
@@ -71,7 +71,7 @@ property flowing smoothly.`,
     single: false,
     imgOne: pipes,
     imgOneAlt: 'Pipes in a building',
-    imgTwo: gasBoiler,
+    imgTwo: commercialBoiler,
     imgTwoAlt: 'A gas boiler',
   },
   {
@@ -90,9 +90,9 @@ optimal performance, saving you money and increasing comfort.`,
     subTitle: `Whether you need a new roof, repairs, or maintenance, our roofing experts have you covered.
 We specialize in a variety of roofing materials, including shingles, metal, and flat roofs,
 offering long-lasting and durable solutions to protect your property from the elements.`,
-    imgOne: beforeAfter,
+    imgOne: warehouseConstruction,
     imgOneAlt: 'Construction site before and after',
-    imgTwo: cladding,
+    imgTwo: officeCladding,
     imgTwoAlt: 'A building with cladding',
   },
   {
@@ -120,19 +120,19 @@ fencing.`,
     title: 'Painting & Finishing',
     subTitle: `Our painting and finishing services help you add the perfect final touches to any project. We
 offer internal and external painting, as well as finishes such as taping and plastering.`,
-    img: painting,
-    imgAlt: 'A room being painted',
+    img: industrialPainting,
+    imgAlt: 'An industrial building facade being painted',
   },
   {
     isRightSection: true,
     title: 'Joinery',
-    subTitle: `Our expert team provide everything from framing and structural work to finishes sucha as
+    subTitle: `Our expert team provide everything from framing and structural work to finishes such as
 doors, skirtings and kitchens.`,
     single: false,
-    imgOne: door,
-    imgOneAlt: 'The front door of a house',
-    imgTwo: kitchen,
-    imgTwoAlt: 'A recently remodeled kitchen',
+    imgOne: officeJoinery,
+    imgOneAlt: 'Interior shot of custom office joinery',
+    imgTwo: commercialKitchen,
+    imgTwoAlt: 'A recently remodeled commercial kitchen',
   },
   {
     isRightSection: false,
@@ -140,7 +140,7 @@ doors, skirtings and kitchens.`,
     subTitle: `We understand that every project is unique, which is why we offer tailored solutions to meet
 your specific requirements. Whether you need specialised design, unique materials, or a
 custom build, our team is here to assist.`,
-    img: beforeAfter,
+    img: warehouseConstruction,
     imgAlt: 'Construction site before and after',
   },
 ]
