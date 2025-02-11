@@ -1,10 +1,10 @@
 export const SITE = {
   title: "Agora Contracts",
-  tagline: "Facilities management",
+  tagline: "Building services",
   description:
-    "Agora Contracts offers facilities management across the west of Scotland",
+    "Agora Contracts offers building services across the west of Scotland",
   description_short:
-    "Agora Contracts offers facilities management across the west of Scotland",
+    "Agora Contracts offers building services across the west of Scotland",
   url: "https://agoracontracts.com",
 };
 

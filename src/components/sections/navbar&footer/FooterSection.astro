@@ -1,8 +1,9 @@
 ---
 // Import the necessary dependencies
 import enStrings from "@utils/navigation.ts";
-import BrandLogo from "@components/BrandLogo.astro";
 import { SITE } from "@data/constants";
+import agoraLogo from "@images/agora-logo.jpg";
+import { Image } from "astro:assets";
 
 const strings = enStrings;
 
@@ -15,7 +16,7 @@ const strings = enStrings;
     <div class="grid grid-cols-2 gap-6 md:grid-cols-4 lg:grid-cols-5">
       <div class="col-span-full lg:col-span-1">
         <!-- Brand Logo -->
-        <BrandLogo class="h-auto w-32" />
+        <Image src={agoraLogo} alt="Agora Contracts" class="h-auto w-32 rounded" />
       </div>
       <!-- An array of links for Product and Company sections -->
       {

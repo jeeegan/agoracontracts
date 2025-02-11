@@ -2,7 +2,7 @@
 const navBarLinks = [
   { name: "Home", url: "/" },
   { name: "Services", url: "/services" },
-  { name: "Local Authority", url: "/local-authority" },
+  { name: "Public Sector", url: "/public-sector" },
   { name: "About Us", url: "/about" },
   { name: "Contact", url: "/contact" },
 ];
@@ -12,7 +12,7 @@ const footerLinks = [
     section: "Services",
     links: [
       { name: "Our services", url: "/services" },
-      { name: "Local Authority", url: "/local-authority" },
+      { name: "Public Sector", url: "/public-sector" },
     ],
   },
   {

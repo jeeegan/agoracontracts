@@ -1,31 +1,31 @@
 ---
 // Import the necessary components
-import MainLayout from "@/layouts/MainLayout.astro";
-import ContactSection from "@components/sections/misc/ContactSection.astro";
-import { SITE } from "@data/constants";
+import MainLayout from '@/layouts/MainLayout.astro'
+import ContactSection from '@components/sections/misc/ContactSection.astro'
+import { SITE } from '@data/constants'
 
-const pageTitle: string = `Contact | ${SITE.title}`;
+const pageTitle: string = `Contact | ${SITE.title}`
 ---
 
 <!--Utilizing MainLayout for the outer layout of the page, and defining meta for SEO purposes-->
 <MainLayout
   title={pageTitle}
   structuredData={{
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": "https://agoracontracts.com/contact",
-    "url": "https://agoracondtracts.com/contact",
-    "name": "Contact Us | Agora Contracts",
-    "description":
-      "Have questions or want to discuss your next project? Call or email us today to get started.",
-    "isPartOf": {
-      "@type": "WebSite",
-      "url": "https://agoracontracts.com",
-      "name": "Agora Contracts",
-      "description":
-        "Agora Contracts offers expert construction and facilities management services to meet all your project needs.",
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': 'https://agoracontracts.com/contact',
+    url: 'https://agoracondtracts.com/contact',
+    name: 'Contact Us | Agora Contracts',
+    description:
+      'Have questions or want to discuss your next project? Call or email us today to get started.',
+    isPartOf: {
+      '@type': 'WebSite',
+      url: 'https://agoracontracts.com',
+      name: 'Agora Contracts',
+      description:
+        'Agora Contracts offers expert construction and building services to meet all your project needs.',
     },
-    "inLanguage": "en-GB"
+    inLanguage: 'en-GB',
   }}
 >
   <ContactSection />

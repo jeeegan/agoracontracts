@@ -1,64 +1,58 @@
 ---
 // Import the necessary components
-import MainLayout from "@/layouts/MainLayout.astro";
-import HeroSection from "@components/sections/landing/HeroSection.astro";
-import HeroSectionAlt from "@components/sections/landing/HeroSectionAlt.astro";
-import FeaturesNavs from "@components/sections/features/FeaturesNavs.astro";
-import FAQ from "@components/sections/misc/FAQ.astro";
-import constructionWorkers from "@images/construction-workers.avif";
-import faqs from "@data/faqs.json";
-import construction from "@images/construction-image.avif";
-import tools from "@images/automated-tools.avif";
-
+import MainLayout from '@/layouts/MainLayout.astro'
+import HeroSection from '@components/sections/landing/HeroSection.astro'
+import HeroSectionAlt from '@components/sections/landing/HeroSectionAlt.astro'
+import FeaturesNavs from '@components/sections/features/FeaturesNavs.astro'
+import agoraLogo from '@images/agora-logo.jpg'
+import construction from '@images/construction-image.avif'
+import tools from '@images/automated-tools.avif'
 ---
 
 <MainLayout>
-
   <HeroSection
-    title=`Work smarter with <span class="tracking-wider">AGORA <span
-        class="text-yellow-500 dark:text-yellow-400">CONTRACTS</span></span>`
-    subTitle="Your constructions experts. Trust us to handle all of your facilities management and construction needs."
-    primaryBtn="Our Services"
-    primaryBtnURL="/construction"
-    secondaryBtn="Contact Us"
-    secondaryBtnURL="/contact"
+    title=`Work smarter with <span class="tracking-wider">AGORA 
+        CONTRACTS</span>`
+    subTitle='Providing top-quality building services tailored to meet your needs.'
+    primaryBtn='Our Services'
+    primaryBtnURL='/services'
+    secondaryBtn='Contact Us'
+    secondaryBtnURL='/contact'
     withReview={true}
     rating=`<span class="font-bold">4.8</span> / 5`
     starCount={4}
     reviews=`From Over <span class="font-bold">12.8k</span> Reviews`
-    src={constructionWorkers}
-    alt="Construction workers on a building site"
+    src={agoraLogo}
+    alt='Construction workers on a building site'
   />
 
   <FeaturesNavs
-    title=`Agora <span class="text-yellow-500 dark:text-yellow-400">Contracts</span>'s service offerings serve to meet all of your construction needs.`
+    title=`Agora Contracts provide top-quality building services tailored to meet your needs.`
     tabs={[
       {
-        heading: "Facilities Management",
+        heading: 'Services',
         content:
-          "Single site office or large public sector client - we can handle all of your facilities management needs.",
-        svg: "tools",
+          'From electrical works to plumbing and everything in between, we have the expertise to deliver your project on time.',
+        svg: 'tools',
         src: tools,
-        alt: "Yellow and black heavy equipment on brown grass field",
+        alt: 'Yellow and black heavy equipment on brown grass field',
         first: true,
       },
       {
-        heading: "Construction",
+        heading: 'Public Sector',
         content:
-          "Whether it's renovation works, or a new construction - we have the expertise to deliver your project on time.",
-        svg: "house",
+          'We specialise in delivering high-quality construction services for public sector projects.',
+        svg: 'house',
         src: construction,
-        alt: "Gray metal building frame near tower crane during daytime",
+        alt: 'Gray metal building frame near tower crane during daytime',
         second: true,
       },
     ]}
   />
 
-  <FAQ title="Frequently<br />asked questions" faqs={faqs} />
-
   <HeroSectionAlt
-    title="Work with us"
-    subTitle="Get in touch with us today to discuss your next project."
-    url="tel:01411234567"
+    title='Work with us'
+    subTitle='Get in touch with us today to discuss your next project.'
+    url='tel:01411234567'
   />
 </MainLayout>

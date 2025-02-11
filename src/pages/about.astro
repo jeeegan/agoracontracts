@@ -1,98 +1,181 @@
 ---
 // Import necessary components
-import MainLayout from "@/layouts/MainLayout.astro";
-import MainSection from "@components/ui/blocks/MainSection.astro";
-import LeftSection from "@components/ui/blocks/LeftSection.astro";
-import RightSection from "@components/ui/blocks/RightSection.astro";
+import MainLayout from '@/layouts/MainLayout.astro'
+import MainSection from '@components/ui/blocks/MainSection.astro'
+import LeftSection from '@components/ui/blocks/LeftSection.astro'
+import RightSection from '@components/ui/blocks/RightSection.astro'
 
 // Import necessary images
-import blueprints from "@images/blueprints-image.avif";
-import personWorking from "@images/person-working.avif";
-import beforeAfter from "@images/before-after.avif";
-import constructionWorkers from "@images/construction-workers.avif";
-import aerialView from "@images/aerial-view.avif";
-import { SITE } from "@data/constants";
+import blueprints from '@images/blueprints-image.avif'
+import personWorking from '@images/person-working.avif'
+import beforeAfter from '@images/before-after.avif'
+import constructionWorkers from '@images/construction-workers.avif'
+import aerialView from '@images/aerial-view.avif'
+import greenRoof from '@images/green-roof.jpg'
+import roofRepair from '@images/roof-repair.jpg'
+import solarProject from '@images/solar-project.jpg'
+import kitchenRemodel from '@images/kitchen.jpg'
+import { SITE } from '@data/constants'
 
 interface Article {
-  isRightSection: boolean;
-  title: string;
-  subTitle: string;
-  btnExists?: boolean;
-  btnTitle?: string;
-  btnURL?: string;
-  single?: boolean;
-  img?: any;
-  imgAlt?: string;
-  imgOne?: any;
-  imgOneAlt?: string;
-  imgTwo?: any;
-  imgTwoAlt?: string;
+  isRightSection: boolean
+  title: string
+  subTitle: string
+  btnExists?: boolean
+  btnTitle?: string
+  btnURL?: string
+  single?: boolean
+  img?: any
+  imgAlt?: string
+  imgOne?: any
+  imgOneAlt?: string
+  imgTwo?: any
+  imgTwoAlt?: string
 }
 
 const articles: Article[] = [
   {
     isRightSection: true,
-    title: "Lorem Ipsum Dolor Sit Amet",
-    subTitle:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    title: 'Commercial Construction',
+    subTitle: `
+    <div class="dark:text-neutral-400">
+      <p>We have extensive experience in handling commercial works of all sizes. Our commercial services include:</p>
+      <br/>
+      <ul>
+        <li><b>Office Buildings:</b> From small offices to large corporate headquarters, we deliver functional and stylish office spaces.</li>
+        <br/>
+        <li><b>Retail Spaces:</b> Fit out of retail locations</li>
+        <br/>
+        <li><b>Industrial Facilities:</b> Refurbishment of warehouses, factories, and distribution centres with a focus on durability and performance.</li>
+        <br/>
+        <li><b>Insurance Repairs:</b> Transform existing commercial spaces into custom-designed environments that fit the needs of your business.</li>
+      </ul>
+      </div>
+    `,
     single: false,
     imgOne: blueprints,
-    imgOneAlt: "Blueprints and digital tablet with construction plans.",
+    imgOneAlt: 'Blueprints and digital tablet with construction plans.',
     imgTwo: personWorking,
-    imgTwoAlt: "Person working in the office",
+    imgTwoAlt: 'Person working in the office',
   },
   {
     isRightSection: false,
-    title: "Lorem Ipsum Dolor Sit Amet",
+    title: 'Insurance Works',
     subTitle:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    img: beforeAfter,
-    imgAlt: "Construction site before and after",
-    btnExists: true,
-    btnTitle: "Learn More",
-    btnURL: "#",
+      'We provide a range of services to the Insurance industry ranging from whole property refurbishment after am insured event to repair services for specific losses. We provie this service to loss adjusters, local authorities and surveyors dealing with work of this nature.',
+    img: roofRepair,
+    imgAlt: 'Home having the roof repaired',
   },
   {
     isRightSection: true,
-    title: "Lorem Ipsum Dolor Sit Amet",
-    subTitle:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    title: 'Project Management',
+    subTitle: `
+    <div class="dark:text-neutral-400">
+    <p>Our project management services ensure smooth coordination throughout the construction
+    process. We handle:</p><br/>
+    <ul>
+    <li><b>Budgeting & Cost Planning:</b> Clear, upfront estimates to keep your project within
+    budget.</li></br>
+    <li><b>Scheduling:</b> Efficient programme management to ensure your project is completed on
+    time.</li></br>
+    <li><b>Subcontractor Coordination:</b> We manage and coordinate subcontractors to ensure
+    high-quality work at every stage.</li></br>
+    <li><b>Quality Assurance:</b> Our attention to detail ensures top-quality finishes throughout.</li>
+    </ul>
+    </div>
+    `,
     single: false,
     imgOne: constructionWorkers,
-    imgOneAlt: "Construction workers orchestrating a project",
+    imgOneAlt: 'Construction workers orchestrating a project',
     imgTwo: aerialView,
-    imgTwoAlt: "Aerial view of managed construction",
+    imgTwoAlt: 'Aerial view of managed construction',
   },
-];
+  {
+    isRightSection: false,
+    title: 'Refurbishment',
+    subTitle: `
+    <div class="dark:text-neutral-400">
+    <p>If your property is in need of updating, we offer expert refurbishment services:</p><br/>
+    <ul>
+        <li><b>Structural Repairs:</b> Addressing foundational or structural issues to ensure your
+    property is safe.</li></br>
+        <li><b>Internal & External:</b> Enhancing both the inside and outside of your property for
+    improved functionality and aesthetics.</li>
+    </ul>
+    </div>
+    `,
+    img: beforeAfter,
+    imgAlt: 'Construction site before and after',
+  },
+  {
+    isRightSection: true,
+    title: 'Green Building & Sustainability',
+    subTitle:
+      'As part of our commitment to the environment, we offer green building services focused on sustainability and energy efficiency.',
+    single: false,
+    imgOne: greenRoof,
+    imgOneAlt: 'A modern eco-friendly green roof',
+    imgTwo: solarProject,
+    imgTwoAlt: 'Constructing a home with solar panels',
+  },
+  {
+    isRightSection: false,
+    title: 'Why Choose Us?',
+    subTitle: `
+      <div class="dark:text-neutral-400">
+      <ul>
+        <li><b>Experienced Professionals:</b> Our team consists of skilled tradespeople with years of
+experience in every aspect of construction.</li>
+        <br/>
+        <li><b>End-to-End Service:</b> We manage your entire project from start to finish, ensuring
+seamless coordination between trades and contractors.</li>
+        <br/>
+        <li><b>Quality Guaranteed:</b> We pride ourselves on delivering top-notch craftsmanship and
+using only the best materials.</li>
+        <br/>
+                <li><b>Timely & Budget Friendly:</b> We are committed to completing projects on time and
+within budget without compromising quality.</li>
+        <br/>
+        <li><b>Customer Centred Approach:</b> Your satisfaction is our top priority, and we work
+closely with you throughout the process.</li>
+      </ul>
+      </div>
+    `,
+    img: kitchenRemodel,
+    imgAlt: 'A remodeled kitchen',
+  },
+]
 
-const pageTitle: string = `Services | ${SITE.title}`;
+const pageTitle: string = `Services | ${SITE.title}`
 ---
 
 <MainLayout
   title={pageTitle}
   structuredData={{
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": "https://agoracontracts.com/about",
-    "url": "https://agoracontracts.com/about",
-    "name": "About | Agora Contracts",
-    "description": "Providing construction and facilities management expertise for your business.",
-    "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://agoracontracts.com",
-        "name": "Agora Contracts",
-        "description": "Providing construction and facilities management expertise for your business."
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': 'https://agoracontracts.com/about',
+    url: 'https://agoracontracts.com/about',
+    name: 'About | Agora Contracts',
+    description:
+      'Providing top-quality building services tailored to meet your needs.',
+    isPartOf: {
+      '@type': 'WebSite',
+      url: 'https://agoracontracts.com',
+      name: 'Agora Contracts',
+      description:
+        'Providing top-quality building services tailored to meet your needs.',
     },
-    "inLanguage": "en-GB"
+    inLanguage: 'en-GB',
   }}
 >
   <!--MainSection is the introductory section of the page, it also contains a CTA button-->
   <MainSection
-    title="Lorem Ipsum Dolor Sit Amet"
-    subTitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    title='About Us'
+    subTitle='At Agora Contracts we provide top-quality building services tailored to meet your needs. Whether you are looking for insurance works or to undertake a commercial or industrial project, our expert team is ready to help. With years of experience, we pride ourselves on delivering exceptional results, on time and within budget.'
     btnExists={true}
-    btnTitle="Contact Us"
-    btnURL="#"
+    btnTitle='Contact Us'
+    btnURL='/contact'
   />
   <!-- RightSection and LeftSection contain details about various services along with pertinent imagery.
   They alternate for variety in design.
@@ -103,7 +186,7 @@ const pageTitle: string = `Services | ${SITE.title}`;
   If 'single' is true, it displays one image, otherwise it displays two.
   -->
   {
-    articles.map(article => {
+    articles.map((article) => {
       return article.isRightSection ? (
         <RightSection
           title={article.title}
@@ -127,7 +210,7 @@ const pageTitle: string = `Services | ${SITE.title}`;
           btnTitle={article.btnTitle}
           btnURL={article.btnURL}
         />
-      );
+      )
     })
   }
 </MainLayout>
